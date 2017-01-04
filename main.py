@@ -1,6 +1,7 @@
 import sys
 
 import global_seq
+from utils import get_input
 
 debug = True
 
@@ -34,7 +35,7 @@ if __name__ == "__main__":
 
     while True:
         try:
-            command = raw_input("> ")
+            command = get_input()
         except EOFError:
             sys.exit()
         handle_ui(command)
